@@ -1,0 +1,6 @@
+This repository and source distributions bundle several libraries that are compatibly license.
+We list these here.
+
+Name: pytest
+License: MIT
+  For details, see https://github.com/pytest-dev/pytest/blob/main/LICENSE
