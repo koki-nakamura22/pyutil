@@ -1,3 +1,4 @@
+import os
 import re
 
 
@@ -26,8 +27,8 @@ def grep(file_path: str, *keywords) -> list:
     ]
     """
     stripe_lines = readlines(file_path)
-    return [(i, line) for i, line in enumerate(stripe_lines)
-            if any(word in line for word in keywords)]
+    return [{"no": i + 1, "text": line} for i, line in enumerate(stripe_lines)
+            if all(word in line for word in keywords)]
 
 
 def grep_re(file_path: str, *patterns) -> list:
@@ -55,8 +56,8 @@ def grep_re(file_path: str, *patterns) -> list:
     ]
     """
     stripe_lines = readlines(file_path)
-    return [(i, line) for i, line in enumerate(stripe_lines)
-            if any(re.search(pattern, line) for pattern in patterns)]
+    return [{"no": i + 1, "text": line} for i, line in enumerate(stripe_lines)
+            if all(re.search(pattern, line) for pattern in patterns)]
 
 
 def readlines(file_path: str) -> list:
@@ -84,5 +85,5 @@ def readlines(file_path: str) -> list:
     ]
     """
     with open(file_path) as f:
-        stripe_lines = [line.strip() for line in f.readlines()]
+        stripe_lines = [line.rstrip(os.linesep) for line in f.readlines()]
     return stripe_lines
