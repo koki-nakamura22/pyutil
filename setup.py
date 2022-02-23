@@ -11,7 +11,7 @@ setuptools.setup(
     description="original python utility",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/koki-nakamura22/pyutil",
+    url="https://github.com/koki-nakamura22/pyutil/",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.8",
