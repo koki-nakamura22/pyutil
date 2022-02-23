@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/koki-nakamura22/pyutil/",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache License 2.0",
         "Operating System :: OS Independent",
     ],
