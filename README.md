@@ -12,7 +12,7 @@ pip install git+https://github.com/koki-nakamura22/pyutil
 
 ### Uninstall
 
-pip install git+https://github.com/koki-nakamura22/pyutil
+pip uninstall pyutil
 
 ### Use
 
