@@ -8,11 +8,11 @@ Python >=3.8
 
 ### Install
 
-TBD
+pip install git+https://github.com/koki-nakamura22/pyutil
 
 ### Uninstall
 
-TBD
+pip install git+https://github.com/koki-nakamura22/pyutil
 
 ### Use
 
