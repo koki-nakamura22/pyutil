@@ -12,16 +12,6 @@ __FOR_GREP_TEST_FILE_PATH = os.path.join(__TEST_FILE_DIR, "for_grep_test.txt")
 #############
 
 
-def test_grep_file_path_none():
-    with pytest.raises(TypeError):
-        grep(None, None)
-
-
-def test_grep_file_does_not_exist():
-    with pytest.raises(FileNotFoundError):
-        grep("aaaaaaaaaaa", None)
-
-
 def test_grep_empty_file():
     assert grep(__EMPTY_FILE_PATH, "big") == []
     assert grep(__EMPTY_FILE_PATH, "big") == list()
@@ -76,16 +66,6 @@ def test_grep_multiple_keywords_list_does_not_exist():
 ###############
 # grep_re test
 ###############
-
-
-def test_grep_re_file_path_none():
-    with pytest.raises(TypeError):
-        grep_re(None, None)
-
-
-def test_grep_re_file_does_not_exist():
-    with pytest.raises(FileNotFoundError):
-        grep_re("aaaaaaaaaaa", None)
 
 
 def test_grep_re_empty_file():
